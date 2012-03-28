@@ -6,10 +6,12 @@ VISUAL=emacs
 PAGER='less -i'
 set -o notify   # Report status of terminated bg jobs immediately
 set -o emacs    # emacs-style editing
+export GREP_OPTIONS='--color=auto'
 
 ###########
 # options #
 ###########
+shopt -s nocaseglob
 shopt -s extglob   # extended pattern matching features
 shopt -s cdspell   # correct dir spelling errors on cd
 shopt -s lithist   # save multi-line commands with newlines
@@ -107,3 +109,10 @@ echo -e ""
 echo -ne "Today is "; date
 
 echo -e ""
+
+#######
+# ssh #
+#######
+if [[ -e ~/.ssh/known_hosts ]]; then
+    complete -o default -W "$(cat ~/.ssh/known_hosts | sed 's/[, ].*//' | sort | uniq | grep -v '[0-9]')" ssh
+fi
