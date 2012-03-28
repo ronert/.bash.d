@@ -85,9 +85,15 @@ export GRC_HOME=~/.grc
 export HISTFILESIZE=10000
 export HISTSIZE=10000
 shopt -s histappend
-export HISTCONTROL=erasedups
 export HISTIGNORE="[bf]g:[ ]*:exit"
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  "
+shopt -s histreedit
+shopt -s histverify
+export HISTCONTROL="ignorespace:erasedups"
+
+
+# Easily re-execute the last history command.
+alias r="fc -s"
 
 ########
 # path #
