@@ -95,12 +95,6 @@ export PATH=$PATH:~/bin
 export PATH=$PATH:~/Dropbox/bin
 export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
 
-##########
-# prompt #
-##########
-# set your prompt
-export PS1="\n$C_LIGHTGREEN\u$C_DARKGRAY@$C_BLUE\h $C_DARKGRAY: $C_LIGHTYELLOW\w\n$C_DARKGRAY\$$C_DEFAULT "
-
 ###################
 # welcome message #
 ###################
@@ -111,3 +105,5 @@ echo -e "Welcome, Ronert"
 echo -e ""
 
 echo -ne "Today is "; date
+
+echo -e ""
