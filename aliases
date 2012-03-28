@@ -1,0 +1,53 @@
+######
+# ls #
+######
+alias la="ls -laF"
+alias ll="ls -lF"
+alias newer="ls -dt * | head -1"
+
+########
+# wget #
+########
+alias wgetR="wget -r -l1 -nd -Nc -A.R"
+alias wgetpdf="wget -r -l1 -nd -Nc -A.pdf"
+alias wgettxt="wget -r -l1 -nd -Nc -A.txt"
+alias wgetcsv="wget -r -l1 -nd -Nc -A.csv"
+alias wgetdat="wget -r -l1 -nd -Nc -A.dat"
+alias wgetr="wget -r -l1 -nd -Nc -A.r"
+alias wgettex="wget -r -l1 -nd -Nc -A.tex"
+alias wgetraw="wget -r -l1 -nd -Nc -A.raw"
+
+#######
+# ssh #
+#######
+alias sshlmu="ssh s10593320@cipserv1.stat.uni-muenchen.de"
+scplmu() { scp $1 s10593320@cipserv1.stat.uni-muenchen.de:/zpool1/s10593320 ; }
+
+########
+# dirs #
+########
+alias stat="cd ~/Dropbox/Statistik/"
+alias comp="cd ~/Dropbox/Statistik/Computerintensive Methoden/"
+alias theorie="cd ~/Dropbox/Statistik/Maß- und Wahrscheinlichkeitstheorie/"
+alias testen="cd ~/Dropbox/Statistik/Schätzen und Testen I/"
+alias finanz="cd ~/Dropbox/Statistik/Finanzökonometrie - Portfolioanalyse/"
+alias regression="cd ~/Dropbox/Statistik/Generalisierte Regression/"
+
+#######
+# mac #
+#######
+alias qlf="qlmanage -p"
+
+##############
+# efficiency #
+##############
+alias frequency="cat ~/.bash_history | ~/Dropbox/bin/perl/frequency | sort -rn | head"
+
+#########
+# emacs #
+#########
+alias e="emacsclient -t"
+alias ec="emacsclient -c"
+alias vim="emacsclient -t"
+alias vi="emacsclient -t"
+alias es="emacs --daemon"
