@@ -1,0 +1,40 @@
+###########
+# general #
+###########
+EDITOR=emacs
+VISUAL=emacs
+PAGER='less -i'
+set -o notify   # Report status of terminated bg jobs immediately
+set -o emacs    # emacs-style editing
+
+###########
+# options #
+###########
+shopt -s extglob   # extended pattern matching features
+shopt -s cdspell   # correct dir spelling errors on cd
+shopt -s lithist   # save multi-line commands with newlines
+shopt -s autocd    # if a command is a dir name, cd to it
+shopt -s checkjobs # print warning if jobs are running on shell exit
+shopt -s dirspell  # correct dir spelling errors on completion
+shopt -s globstar  # ** matches all files, dirs and subdirs
+shopt -s cmdhist   # save multi-line commands in a single hist entry
+shopt -s checkwinsize # check the window size after each command
+shopt -s no_empty_cmd_completion # don't try to complete empty cmds
+
+###########
+# history #
+###########
+export HISTFILESIZE=10000
+export HISTSIZE=10000
+shopt -s histappend
+export HISTCONTROL=erasedups
+export HISTIGNORE="[bf]g:[ ]*:exit"
+
+########
+# path #
+########
+export HOSTFILE=~/.hosts
+export PATH=$PATH:~/bin
+export PATH=$PATH:~/Dropbox/bin
+export PATH="/usr/local/bin:$PATH:/usr/local/sbin"
+
