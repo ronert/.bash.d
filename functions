@@ -39,3 +39,13 @@ function cs () {
 		ls -hlAF
 	fi
 }
+
+# do an ls after every successful cd
+function cd {
+    builtin cd "$@" && ls
+}
+
+# recursive mkdir and cd if successful
+function mkcd {
+    mkdir -p "$@" && builtin cd "$@"
+}

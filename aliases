@@ -1,9 +1,10 @@
 ######
 # ls #
 ######
-alias la="ls -laF"
-alias ll="ls -lF"
-alias newer="ls -dt * | head -1"
+alias la="ls -lGaF"
+alias ll="ls -lGF"
+alias lal="ls -GlFa"
+alias newer="ls -dGt * | head -1"
 
 ########
 # wget #
@@ -51,3 +52,15 @@ alias ec="emacsclient -c"
 alias vim="emacsclient -t"
 alias vi="emacsclient -t"
 alias es="emacs --daemon"
+
+###########
+# network #
+###########
+# Get readable list of network IPs
+alias ips="ifconfig -a | perl -nle'/(\d+\.\d+\.\d+\.\d+)/ && print $1'"
+alias myip="dig +short myip.opendns.com @resolver1.opendns.com"
+
+##########
+# system #
+##########
+

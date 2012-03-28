@@ -85,6 +85,7 @@ export HISTSIZE=10000
 shopt -s histappend
 export HISTCONTROL=erasedups
 export HISTIGNORE="[bf]g:[ ]*:exit"
+export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  "
 
 ########
 # path #
