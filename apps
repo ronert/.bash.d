@@ -1,5 +1,11 @@
-# activate autojump
+############
+# autojump #
+############
 if [ -f `brew --prefix`/etc/autojump ]; then
   . `brew --prefix`/etc/autojump
 fi
 
+#############
+# Bashmarks #
+#############
+source ~/.bash.d/bashmarks/bashmarks.sh
