@@ -17,6 +17,12 @@ else
     alias ll='ls -al'
     alias lsd='CLICOLOR_FORCE=1 ll | grep --color=never "^d"'
 fi
+alias mkdir='mkdir -p'
+
+###########
+# general #
+###########
+alias more='less'
 
 ########
 # wget #
