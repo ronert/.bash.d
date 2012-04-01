@@ -23,6 +23,20 @@ alias mkdir='mkdir -p'
 # general #
 ###########
 alias more='less'
+alias reload='. ~/.bashrc'
+# more is less
+alias more='less'
+alias mroe='more'
+alias m='more'
+alias h='history'
+# execute last command
+# 'r cc' runs the last command beginning with "cc"
+alias r='fc -s'
+alias igrep='grep -i'
+alias rgrep='grep -r'
+alias ftail='tail -f'
+# shows all declared functions
+alias functions='declare -F'
 
 ########
 # wget #
