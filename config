@@ -7,6 +7,22 @@ PAGER='less -i'
 set -o notify   # Report status of terminated bg jobs immediately
 set -o emacs    # emacs-style editing
 export GREP_OPTIONS='--color=auto'
+"\M-l": "ls -ltrF\r"
+"\M-h": "dirs -v\r"
+
+# If you type any text and press Up/Down,
+# you can search your history for commands starting
+# with that text
+"\e[B": history-search-forward
+"\e[A": history-search-backward
+
+# Use Ctrl or Alt Arrow keys to move along words
+"\C-[OD" backward-word
+"\C-[OC" forward-word
+"\e\e[C": forward-word
+"\e\e[D": backward-word
+
+"\M-r": forward-search-history
 
 ###########
 # options #
@@ -22,6 +38,7 @@ shopt -s globstar  # ** matches all files, dirs and subdirs
 shopt -s cmdhist   # save multi-line commands in a single hist entry
 shopt -s checkwinsize # check the window size after each command
 shopt -s no_empty_cmd_completion # don't try to complete empty cmds
+set completion-ignore-case On
 
 ##########
 # colors #

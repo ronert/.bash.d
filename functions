@@ -1,3 +1,55 @@
+#
+# Extract an archive of any type
+#
+extract(){
+    if [ $# -lt 1 ]
+    then
+        echo Usage: extract file
+        return 1
+    fi
+    if [ -f $1 ] ; then
+        case $1 in
+            *.tar.bz2)   tar xvjf $1    ;;
+            *.tar.gz)    tar xvzf $1    ;;
+            *.bz2)       bunzip2 $1     ;;
+            *.rar)       unrar x $1     ;;
+            *.gz)        gunzip $1      ;;
+            *.tar)       tar xvf $1     ;;
+            *.tbz2)      tar xvjf $1    ;;
+            *.tgz)       tar xvzf $1    ;;
+            *.zip)       unzip $1       ;;
+            *.war|*.jar) unzip $1       ;;
+            *.Z)         uncompress $1  ;;
+            *.7z)        7z x $1        ;;
+            *)           echo "don't know how to extract '$1'..." ;;
+        esac
+    else
+        echo "'$1' is not a valid file!"
+    fi
+}
+
+#
+# Swap two files
+#
+swap(){
+    if [ $# -ne 2 ]
+    then
+        echo Usage: swap file1 file2
+        return 1
+    fi
+    local TMPFILE=tmp.$$
+    mv "$1" $TMPFILE
+    mv "$2" "$1"
+    mv $TMPFILE "$2"
+}
+
+#
+# fast find, using globstar
+#
+ff(){
+    ls -ltr **/$@
+}
+
 # Trivial command line calculator using awk's bult-in floating-point arithmetic expressions:
 function calc
 {
