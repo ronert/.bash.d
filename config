@@ -9,6 +9,8 @@ set -o emacs    # emacs-style editing
 export GREP_OPTIONS='--color=auto'
 "\M-l": "ls -ltrF\r"
 "\M-h": "dirs -v\r"
+# Use Alt/Meta + Delete to delete the preceding word
+"\e[3;3~": kill-word
 
 # If you type any text and press Up/Down,
 # you can search your history for commands starting
