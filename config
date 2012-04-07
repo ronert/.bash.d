@@ -18,14 +18,6 @@ export GREP_OPTIONS='--color=auto'
 "\e[B": history-search-forward
 "\e[A": history-search-backward
 
-# Use Ctrl or Alt Arrow keys to move along words
-"\C-[OD" backward-word
-"\C-[OC" forward-word
-"\e\e[C": forward-word
-"\e\e[D": backward-word
-
-"\M-r": forward-search-history
-
 ###########
 # options #
 ###########
