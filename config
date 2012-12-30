@@ -110,7 +110,7 @@ alias r="fc -s"
 # path #
 ########
 export HOSTFILE=~/.hosts
-export PATH="~/julia:~/Dropbox/bin:~/bin:/usr/local/bin:$PATH:/usr/local/sbin"
+export PATH="~/julia:~/Dropbox/bin:/usr/local/share/python/:~/bin:/usr/local/bin:$PATH:/usr/local/sbin"
 
 ###################
 # welcome message #
@@ -133,3 +133,9 @@ if [[ -e ~/.ssh/known_hosts ]]; then
 fi
 
 
+###########################
+# Python virtualenv setup #
+###########################
+export WORKON_HOME=$HOME/domains
+source /usr/local/share/python/virtualenvwrapper.sh
+export PIP_VIRTUALENV_BASE=$
